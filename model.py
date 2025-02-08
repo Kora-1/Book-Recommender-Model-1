@@ -14,17 +14,17 @@ def load():
 
     # Check if already loaded, if not, then load
     if embeddings is None:
-        embeddings = pickle.load(open(r"E:\Projects\Jupyter Notebook\Book recommender\embeddings.pkl", 'rb'))
+        embeddings = pickle.load(open("embeddings.pkl", 'rb'))
 
     if similarity_matrix is None:
         similarity_matrix = pickle.load(
-            open(r"E:\Projects\Jupyter Notebook\Book recommender\similarity_matrix.pkl", 'rb'))
+            open("similarity_matrix.pkl", 'rb'))
 
     if model is None:
         model = SentenceTransformer('all-MiniLM-L6-v2')
 
     if df is None:
-        df = pd.read_csv(r"E:\Projects\Jupyter Notebook\Book recommender\Cleaned_Book_dataset2.csv")
+        df = pd.read_csv("Cleaned_Book_dataset2.csv")
 
 
 # Function to recommend books based on user query

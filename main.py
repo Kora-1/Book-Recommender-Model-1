@@ -11,13 +11,13 @@ async def load_model():
 
 @app.get("/")
 async def root():
-    return {"message": "API Made By [Your Name]"}
+    return {"message": "API Made By Dishant"}
 
-@app.get("/run")
-async def say_hello():
-    # Optionally, you could call `load()` here if you want to re-load the model on request
-    # But it's better to call it once at startup, as done in the `startup` event
-    return {"message": "Model Loaded Successfully (via /run endpoint)"}
+# @app.get("/run")
+# async def say_hello():
+#     # Optionally, you could call `load()` here if you want to re-load the model on request
+#     # But it's better to call it once at startup, as done in the `startup` event
+#     return {"message": "Model Loaded Successfully (via /run endpoint)"}
 
 # @app.get("/recommend_books/{query}/{length}")
 # async def get_books(query: str, length: int = 5):  # Use default length 5
